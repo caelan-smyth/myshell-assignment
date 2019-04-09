@@ -1,5 +1,5 @@
 # CA216 Myshell Assignment
-## Manual
+## User Manual
   - cd <directory>: Changes the current working directory to <directory>. If no <directory> argument is passed, reports the current working directory instead.
   - clr: Clears the screen.
   - dir <directory>: Lists the contents of <directory>.
