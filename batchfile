@@ -1,0 +1,6 @@
+cd ..
+cd
+dir myshell-assignment
+dir
+environ
+echo testing 1 2  3   1 2  3
