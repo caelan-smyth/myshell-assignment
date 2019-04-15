@@ -7,12 +7,12 @@ class myPrompt(Cmd):
 
     def do_quit(self, key):
         "Exis the shell."
-        print("Exiting...")
+        print("Exiting...\nThank you for using the shell.")
         return True
 
     def do_cd(self, s=""):
         "Changes the current working directory.\nUsage: cd <directory>"
-        if s:
+        if s != "":
             try:
                 os.chdir(s)
                 path = os.getcwd()
@@ -21,28 +21,28 @@ class myPrompt(Cmd):
             except:
                 print("No such file or directory: " + s + ". 'help cd' for help.")
         else:
-            os.getcwd()
+            print(os.getcwd())
 
-    def do_dir(self, s):
+    def do_dir(self, s=""):
         "Lists the contents of the directory.\nUsage: dir <directory>"
-        try:
-            os.listdir(s)
-        except:
-            print("No such file or directory: " + s)
+        if s != "":
+            print(os.listdir(s))
+        else:
+            print(os.listdir(os.getcwd()))
 
-    def do_clr(self):
+    def do_clr(self, args):
         "Clears the screen."
         os.system('clear')
 
-    def do_environ(self):
+    def do_environ(self, args):
         "Prints the environment strings."
-        os.environ()
+        print(os.environ)
 
-    def do_echo(self, s):
+    def do_echo(self, s=""):
         "Prints a comment on the screen with excess whitespace removed."
         print(' '.join(s.split()) + "\n")
 
-    def do_pause(self):
+    def do_pause(self, args):
         "Pauses shell operation until the Enter key is pressed."
         input("Press Enter to continue.")
 
