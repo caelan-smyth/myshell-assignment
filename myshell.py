@@ -20,7 +20,7 @@ class myShell(Cmd):
                 os.environ["PWD"] = os.getcwd()
                 shell.prompt = "~" + path + ":" + "~" + "$ "
             except:
-                print(s + ": No such file or directory. Do 'help cd' for help.")
+                print(s + ": No such file or directory. 'help cd' for help.")
         else:
             os.getcwd()
 
