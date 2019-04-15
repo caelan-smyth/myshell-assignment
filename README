@@ -2,6 +2,8 @@ MyShell
 
 A simple shell built in Python.
 
+Pass a filename when invoking the shell to have the shell execute the commands contained within.
+
 Commands:
 
 -cd <directory>
