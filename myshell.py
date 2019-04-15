@@ -1,7 +1,7 @@
 from cmd import Cmd
-import os, sys
+import os, sys, subprocess
 
-class myshell(Cmd):
+class myShell(Cmd):
     prompt = "~" + os.getcwd() + ":" + "~" + "$ "
     starter = "Welcome to the shell! Type ? to list commands."
 
@@ -57,7 +57,6 @@ class myshell(Cmd):
     def help_pause():
         print("Pauses shell operation until the Enter key is pressed.")
 
-    def do_help():
     
 
 if __name__ == '__main__':
