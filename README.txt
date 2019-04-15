@@ -22,6 +22,7 @@ echo <comment>
 
 help
 - Displays the user manual using the more filter.
+- help(<command>) Displays help for <command>.
 
 pause
 - Pauses shell operation until the Enter key is pressed.
