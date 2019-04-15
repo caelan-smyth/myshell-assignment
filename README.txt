@@ -18,7 +18,7 @@ environ
 - Lists all of the environment strings.
 
 echo <comment>
-- Displays <comment> on the screen with all excess whitespace stripped, followed by a new line.
+- Displays <comment> on the screen with all excess whitespace removed, followed by a new line.
 
 help
 - Displays the user manual using the more filter.
