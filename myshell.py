@@ -1,5 +1,5 @@
 from cmd import Cmd
-import os, sys, subprocess
+import os, sys
 
 class myPrompt(Cmd):
     prompt = "~" + os.getcwd() + "$ "
@@ -61,9 +61,7 @@ class myPrompt(Cmd):
         print("Pauses shell operation until the enter key is pressed.")
 
     def do_help(self, s):            
-        with open("README.txt") as helpfile:
-            helper = "\n".join(helpfile.readlines())
-            print(helper)
+        os.system("more README")
 
     def help_help(self):
         print("Displays the user manual.\nhelp <command> displays help for the specified command.")
