@@ -13,10 +13,12 @@ Lists the contents of the directory <directory>.
 If no <directory> argument is passed, returns the contents of the current working directory.
 
 -clr
-Clears the screen. Does not take any arguments.
+Clears the screen.
+Does not take any arguments.
 
 -environ
-Lists all of the environment strings. Does not take any arguments
+Lists all of the environment strings.
+Does not take any arguments
 
 -echo <comment>
 Displays <comment> on the screen with all excess whitespace removed, followed by a new line.
