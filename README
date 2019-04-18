@@ -1,10 +1,11 @@
-MyShell
+myShell
 
 A simple shell built in Python.
 
-Pass a filename when invoking the shell to have the shell execute the commands contained within.
+To invoke the shell:
+python3 myshell.py stdin=None
 
-Commands:
+myShell accepts input of the following commands:
 
 -cd <directory>
 Changes the current working directory to <directory>.
@@ -27,7 +28,6 @@ Displays <comment> on the screen with all excess whitespace removed, followed by
 
 -help
 Displays the user manual using the more filter.
-help <command> displays help for <command>.
 
 -pause
 Pauses shell operation until the Enter key is pressed.
@@ -35,3 +35,19 @@ Pauses shell operation until the Enter key is pressed.
 -quit
 Exits the shell.
 
+Other Functions:
+Program Invocation:
+If a command is entered which myShell doesn't recognise, i.e. it is not defined in myShell, it will instead implement subprocessing to execute this command through the base UNIX terminal.
+
+File Input:
+If a batchfile is passed as an argument when invoking the shell, i.e. stdin="batchfile", the shell will accept commands from this batchfile until the end of the file, then exit.
+If there is no batchfile passed, the shell invokes as normal.
+
+I/O Redirection:
+When invoking a program, myShell supports I/O redirection to/from a file. If the command line programname arg1 arg2 > outputfile is passed, myShell will invoke <programname> and its arguments, and output the result to <outputfile>.
+If the redirection token passed is ">>", myShell will invoke <programname> and its arguments, and append the results to <outputfile>.
+
+Background Execution:
+When invoking a program, if the command line contains the & character at the end, it indicates to myShell that it should return to the command line prompt immediately after launching the program.
+
+Thank you for using myShell.
