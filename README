@@ -47,7 +47,4 @@ I/O Redirection:
 When invoking a program, myShell supports I/O redirection to/from a file. If the command line programname arg1 arg2 > outputfile is passed, myShell will invoke <programname> and its arguments, and output the result to <outputfile>.
 If the redirection token passed is ">>", myShell will invoke <programname> and its arguments, and append the results to <outputfile>.
 
-Background Execution:
-When invoking a program, if the command line contains the & character at the end, it indicates to myShell that it should return to the command line prompt immediately after launching the program.
-
 Thank you for using myShell.
